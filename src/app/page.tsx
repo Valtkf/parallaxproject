@@ -4,12 +4,11 @@ import { useEffect } from "react";
 import ZoomParallax from "./components/ZoomParallax/index";
 import styles from "./page.module.css";
 import Lenis from "@studio-freight/lenis";
-import { div } from "motion/react-client";
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
 
-    function raf(time) {
+    function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
